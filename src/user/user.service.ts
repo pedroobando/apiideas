@@ -22,7 +22,7 @@ export class UserService {
       throw new HttpException(
         'Invalid username/password',
         HttpStatus.BAD_REQUEST,
-      );      
+      );
     }
     return user.toReponseObject(true);
   }

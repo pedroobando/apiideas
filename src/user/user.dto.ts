@@ -8,6 +8,7 @@ export class UserDTO {
   password: string;
 }
 
+// tslint:disable-next-line:max-classes-per-file
 export class UserRO {
   id: string;
   username: string;
