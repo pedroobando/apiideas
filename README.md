@@ -24,6 +24,30 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+
+## Description
+
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+A reddit/twitter style app to keep track of posted App Ideas. This is the companion source code for the YouTube tutorial [Ideas App - NestJS API](https://www.youtube.com/watch?v=NF9Xn4g5MJY&list=PLBeQxJQNprbiJm55q7nTAfhMmzIC8MWxc) series.
+
+### User Stories - Project Timeline
+
+- x Authenticate users
+- x Users can CRUD ideas
+- x Users can upvote/downvote ideas
+- x Users can bookmark ideas
+- x Users can comment on ideas
+- x Ideas can be seen in realtime
+
+### Stack
+
+- Database - PostgreSQL
+- REST API - NestJS
+- GraphQL API - NestJS
+- Rest Frontend - Angular with NGRX
+- GraphQL Frontend - React (Native?) with Apollo Client
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
@@ -46,29 +70,6 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 

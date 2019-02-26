@@ -19,4 +19,5 @@ export class IdeaRO {
   author: UserRO;
   upvotes?: number;
   downvotes?: number;
+  comments?: string[];
 }
