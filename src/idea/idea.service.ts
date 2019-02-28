@@ -16,6 +16,8 @@ export class IdeaService {
     private userRepository: Repository<UserEntity>,
   ) {}
 
+  private recordNumberInt(): number {return 25; }
+
   private toResponseObject(idea: IdeaEntity): IdeaRO {
     const responseObject: any = {...idea, author: idea.author.toReponseObject(false) };
     if (responseObject.upvotes) {
@@ -52,8 +54,13 @@ export class IdeaService {
     return idea;
 }
 
-  async showAll(): Promise<IdeaRO[]> {
-    const ideas = await this.ideaRepository.find({relations: ['author', 'upvotes', 'downvotes', 'comments']});
+  async showAll(page: number = 1, newest?: boolean): Promise<IdeaRO[]> {
+    const ideas = await this.ideaRepository.find({
+      relations: ['author', 'upvotes', 'downvotes', 'comments'],
+      take: this.recordNumberInt(),
+      skip: this.recordNumberInt() * (page - 1),
+      order: newest && { created: 'DESC' },
+    });
     return ideas.map(idea => this.toResponseObject(idea));
     // return await this.ideaRepository.find({relations: ['author']});
   }
